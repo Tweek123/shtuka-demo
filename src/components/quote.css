@@ -1,0 +1,4 @@
+.quare  { 
+  border: 20px solid transparent; border-left: 20px solid red; border-top: 20px solid green;
+   width: 0;
+}
