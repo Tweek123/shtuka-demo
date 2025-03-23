@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import cn from 'classnames';
 
 interface TypographyProps {
@@ -25,7 +25,7 @@ const styles = {
 };
 
 const Typography: React.FC<TypographyProps> = ({ variant, children, className, color = 'text-primary', background, fontFamily = 'VarelaRound' }) => {
-  const Tag = variantMapping[variant] || 'p';
+  const Tag = variantMapping[variant] as keyof JSX.IntrinsicElements;
 
   return (
     <Tag

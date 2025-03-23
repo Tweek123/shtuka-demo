@@ -2,14 +2,12 @@ import React from 'react';
 
 interface UnderlineProps {
   children: React.ReactNode;
-  className?: string;
-  color?: string;
-  thickness?: string;
+  gradient?: string
 }
 
-const Underline: React.FC<UnderlineProps> = ({ children, className, color = 'bg-primary', thickness = 'h-1' }) => {
+const Underline: React.FC<UnderlineProps> = ({ children, gradient = 'to-[#fed841]' }) => {
   return (
-    <span className="relative inline-block bg-gradient-to-b from-transparent via-transparent via-80% to-[#fed841] to-80% bg-[length:100px_1.2em]">
+    <span className={`relative inline-block bg-gradient-to-b from-transparent via-transparent via-80% ${gradient} to-80% bg-[length:100px_1.2em]`}>
       {children}
     </span>
   );
