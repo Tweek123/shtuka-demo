@@ -29,6 +29,15 @@
   font-style: normal;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(14px + 0.5vw); /* Пример: 14px + 0.5% от ширины экрана */}
+
 body {
   color: var(--text-dark);
   background: linear-gradient(135deg, 
@@ -139,4 +148,60 @@ body {
 
 .text-balance {
   text-wrap: balance;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.custom-arrow.left {
+  left: 10px;
+}
+
+.custom-arrow.right {
+  right: 10px;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.custom-prev, .custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
 }

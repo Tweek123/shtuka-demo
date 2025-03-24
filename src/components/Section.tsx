@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 interface SectionProps {
   children: React.ReactNode;
@@ -7,10 +8,15 @@ interface SectionProps {
   padding?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ children, className, background = 'bg-white', padding = 'py-16' }) => {
+const Section: React.FC<SectionProps> = ({ children, className, background, padding = 'px-4' }) => {
   return (
-    <section className={`flex justify-center items-center w-full ${background} ${padding} ${className || ''}`}>
-        {children}
+    <section className={cn(
+      'flex justify-center items-center w-full',
+      padding,
+      className,
+      background
+    )}>
+      {children}
     </section>
   );
 };

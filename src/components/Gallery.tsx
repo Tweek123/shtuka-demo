@@ -1,20 +1,22 @@
 "use client";
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Select from 'react-select';
 import Typography from './Typography';
 
 const projects = [
-  { id: 1, title: 'Проект 1', category: 'Дизайн', image: 'https://1shtuka.ru/wordpress/wp-content/uploads/2023/11/DWDW.jpg' },
-  { id: 2, title: 'Проект 2', category: 'Разработка', image: 'https://1shtuka.ru/wordpress/wp-content/uploads/2023/11/DWDW.jpg' },
-  { id: 3, title: 'Проект 3', category: 'Маркетинг', image: 'https://1shtuka.ru/wordpress/wp-content/uploads/2023/11/DWDW.jpg' },
+  { id: 1, title: 'клиника RESTETICA', category: 'Коммерческие объекты', image: '/images/portfolio/1.jpg' },
+  { id: 2, title: 'Дом. Санкт-Петербург', category: 'Дома', image: '/images/portfolio/2.jpg' },
+  { id: 3, title: 'Коттедж', category: 'Дома', image: '/images/portfolio/3.jpg' },
+  { id: 4, title: 'Квартира в Москве', category: 'Квартиры', image: '/images/portfolio/4.jpg' },
+  { id: 5, title: 'Дом 500 м2', category: 'Дома', image: '/images/portfolio/5.jpg' },
+  { id: 6, title: 'ЖК ТРИЛОГИЯ', category: 'Квартиры', image: '/images/portfolio/6.jpg' },
 ];
 
 const categories = [
   { value: 'all', label: 'Все' },
-  { value: 'Дизайн', label: 'Дизайн' },
-  { value: 'Разработка', label: 'Разработка' },
-  { value: 'Маркетинг', label: 'Маркетинг' },
+  { value: 'Квартиры', label: 'Квартиры' },
+  { value: 'Дома', label: 'Дома' },
+  { value: 'Коммерческие объекты', label: 'Коммерческие объекты' },
 ];
 
 export default function Gallery() {
@@ -26,7 +28,7 @@ export default function Gallery() {
 
   return (
     <div className='flex flex-col flex-grow'>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 flex-wrap whitespace-nowrap uppercase">
         {categories.map((c) => <div className='flex flex-row' onClick={() =>  setSelectedCategory(c.value)}><Typography className='cursor-pointer' variant='p' color={selectedCategory === c.value ? 'text-[#eb2f5b]' : 'text-[#aaaaaa]'}>{c.label}</Typography></div>)}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
