@@ -15,6 +15,7 @@ import Project from '@/components/Project';
 import Gallery from '@/components/Gallery';
 import Slider from '@/components/Slider';
 import Image from 'next/image';
+import Divider from '@/components/Divider';
 
 /**
  * The `Home` component represents the main page layout of the website.
@@ -105,13 +106,49 @@ export default function Home() {
             <Info icon={faPaintRoller} text={'ВЫЯВИМ НУЖНЫЙ ВАМ СТИЛЬ ИНТЕРЬЕРА И РЕАЛИЗУЕМ ЕГО'} subtext={'ИНДИВИДУАЛЬНЫЙ ПОДБОР ИНТЕРЬЕРА, В ЗАВИСИМОСТИ ОТ ОСОБЕННОСТЕЙ ПОМЕЩЕНИЯ, ЗАДАЧ И ВАШИХ ПРЕДПОЧТЕНИЙ'} />
             <Slider className='aspect-[4/5] w-full'>
               <div className="aspect-[4/5] w-full relative">
-                <Image src={'/images/hero/1.jpg'} alt="Hero 1" fill className="object-cover object-center" />
+                <Image src={'/images/examples/16.jpg'} alt="Example 1" fill className="object-cover object-center" />
+                <div className="flex flex-col text-center absolute inset-0 m-auto h-fit bg-white opacity-80 max-w-[80%] w-full p-4">
+                  <Typography className='text-base' color='text-black' variant="h3">ПРОЕКТ ДОМА</Typography>
+                  <Typography className='text-base' color='text-black' variant="h3">ЭКЛЕКТИЧНЫЙ ЛЮКС</Typography>
+                  <Divider className="my-2" orientation="horizontal" thickness="1px" />
+                  <Typography className='text-xs' color='text-black' variant="h3">ПРЕМИАЛЬНЫЙ ЭЛЕКТИЧНЫЙ ИНТЕРЬЕР С ЭЛЕМЕНТАМИ КЛАССИЧЕСКОЙ ОТДЕЛКИ</Typography>
+                </div>
               </div>
               <div className="aspect-[4/5] w-full relative">
-                <Image src={'/images/hero/2.jpg'} alt="Hero 2" fill className="object-cover object-center" />
+                <Image src={'/images/examples/17.jpg'} alt="Example 2" fill className="object-cover object-center" />
+                <div className="flex flex-col text-center absolute inset-0 m-auto h-fit bg-white opacity-80 max-w-[80%] w-full p-4">
+                  <Typography className='text-base' color='text-black' variant="h3">ПРОЕКТ ВЫСТАВКИ</Typography>
+                  <Typography className='text-base' color='text-black' variant="h3">СУМАСШЕДШИЕ СНОВЕДЕНИЯ</Typography>
+                  <Divider className="my-2" orientation="horizontal" thickness="1px" />
+                  <Typography className='text-xs' color='text-black' variant="h3">ФОТОЗОНЫ, ПОЗИТИВНЫЕ ЦВЕТА, ПЛАВНЫЕ ФОРМЫ, ДЕМОНСТРАЦИЯ ТКАНЕЙ И МЕБЕЛИ</Typography>
+                </div>
               </div>
               <div className="aspect-[4/5] w-full relative">
-                <Image src={'/images/hero/3.jpg'} alt="Hero 3" fill className="object-cover object-center" />
+                <Image src={'/images/examples/18.jpg'} alt="Example 3" fill className="object-cover object-center" />
+                <div className="flex flex-col text-center absolute inset-0 m-auto h-fit bg-white opacity-80 max-w-[80%] w-full p-4">
+                  <Typography className='text-base' color='text-black' variant="h3">ПРОЕКТ ИНТЕРЬЕРА</Typography>
+                  <Typography className='text-base' color='text-black' variant="h3">СОВРЕМЕННЫЙ И ТЕМНЫЙ</Typography>
+                  <Divider className="my-2" orientation="horizontal" thickness="1px" />
+                  <Typography className='text-xs' color='text-black' variant="h3">ЧЕТКАЯ ГЕОМЕТРИЯ, ТЕМНЫЙ ФОН, ПРИРОДНЫЕ МАТЕРИАЛЫ И ЯРКИЕ АКЦЕНТЫ</Typography>
+                </div>
+              </div>
+              <div className="aspect-[4/5] w-full relative">
+                <Image src={'/images/examples/19.jpg'} alt="Example 4" fill className="object-cover object-center" />
+                <div className="flex flex-col text-center absolute inset-0 m-auto h-fit bg-white opacity-80 max-w-[80%] w-full p-4">
+                  <Typography className='text-base' color='text-black' variant="h3">ПРОЕКТ ИНТЕРЬЕРА</Typography>
+                  <Typography className='text-base' color='text-black' variant="h3">ТРАДИЦИОННАЯ КЛАССИКА</Typography>
+                  <Divider className="my-2" orientation="horizontal" thickness="1px" />
+                  <Typography className='text-xs' color='text-black' variant="h3">ВИНТАЖНЫЕ ЭЛЕМЕНТЫ, СВЕТЛЫЙ ФОН, ТРАДИЦИОННЫЙ СТИЛЬ ЗАГОРОДНОГО ДОМА</Typography>
+                </div>
+              </div>
+              <div className="aspect-[4/5] w-full relative">
+                <Image src={'/images/examples/20.jpg'} alt="Example 5" fill className="object-cover object-center" />
+                <div className="flex flex-col text-center absolute inset-0 m-auto h-fit bg-white opacity-80 max-w-[80%] w-full p-4">
+                  <Typography className='text-base' color='text-black' variant="h3">ПРОЕКТ КВАРТИРЫ</Typography>
+                  <Typography className='text-base' color='text-black' variant="h3">СОВРЕМЕННЫЙ ЭКО</Typography>
+                  <Divider className="my-2" orientation="horizontal" thickness="1px" />
+                  <Typography className='text-xs' color='text-black/80' variant="h3">ОБИЛИЕ СВЕТЛОГО ШПОНА ДЕРЕВА, СВЕТЛЫЕ ТОНА ДЕРЕВА И ОТДЕЛКИ</Typography>
+                </div>
               </div>
           </Slider>
           </div>

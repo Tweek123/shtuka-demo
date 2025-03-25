@@ -12,7 +12,7 @@ type SliderProps = {
 
 const Slider = ({ children, className }: SliderProps) => {
   const childrenArray = React.Children.toArray(children);
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<any>(null);
 
   return (
     <div className={`w-full relative ${className}`}>
